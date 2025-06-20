@@ -28,15 +28,7 @@ function settingtoggle(){
   document.getElementById("visualmodetogglebuttoncontainer").classList.toggle('visualmodeshow');
   document.getElementById("soundtogglebuttoncontainer").classList.toggle('soundmodeshow');
 }
-function playpause() {
-  if (document.getElementById('switchforsound').checked == false) {
-    audio.pause();
-   }
 
- else{
-     audio.play();
- }
-  }
 
   function visualmode(){
     document.body.classList.toggle('light-mode');

@@ -235,7 +235,7 @@ html {
 }
 
 #switchforsetting,
-#switchforsound,
+
 #switchforvisualmode,
 .hamburger,
 .mobiletogglemenu {
@@ -300,13 +300,7 @@ html {
     transition-duration: .5s
 }
 
-#switchforsound:checked+#labelforsound {
-    transition-duration: .5s;
-    background-image: url(src/svg/Speaker_Icon.svg);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center
-}
+
 
 header {
     width: 100%;
