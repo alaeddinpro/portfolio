@@ -2160,10 +2160,32 @@ footer {
     overflow: hidden;
 }
 
-/* Responsive fixes for all screen sizes */
-@media screen and (max-width: 1024px) {
+/* Enhanced Responsive Design Improvements */
+
+/* Large Desktop */
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 58%;
+    }
+    
     .navbar {
+        width: 95%;
+    }
+    
+    .text-content, .about-section, .skills-section, .projects-section-div {
+        width: 85%;
+    }
+}
+
+/* Desktop/Laptop */
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    
+    .text-content, .about-section, .skills-section, .projects-section-div {
         width: 90%;
+        margin: 0 auto;
     }
     
     .navbar-tabs-ul {
@@ -2171,33 +2193,250 @@ footer {
     }
     
     .project-boxes-div {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 30px;
     }
     
     .project-box {
         width: 100%;
-        margin-bottom: 30px;
+        max-width: 600px;
     }
     
+    .tech-stack-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Tablet Landscape */
+@media screen and (max-width: 1024px) {
     .landing-page-container {
         height: auto;
         min-height: 90vh;
+        padding: 20px 0;
     }
     
     .blob {
         display: none;
     }
+    
+    .info-dp-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .about-info {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .dp {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
-/* Fix for very small screens */
-@media screen and (max-width: 375px) {
+/* Tablet Portrait - Enhanced */
+@media screen and (max-width: 768px) {
     html {
-        font-size: 40%;
+        font-size: 50%;
+    }
+    
+    .text-content {
+        width: 90%;
+        padding: 0 20px;
+    }
+    
+    #hello-friend {
+        font-size: 3.5rem;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    #name, #work {
+        font-size: 5rem;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+    
+    #info-para {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        margin: 20px 0;
+        width: 100%;
+    }
+    
+    .contact-btn-div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .letsTalkBtn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .section-heading {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .section-heading-article {
+        font-size: 4rem;
+    }
+    
+    .tech-stack-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .tech-stack-box {
+        height: 120px;
+    }
+    
+    .project-box {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    
+    .info-div {
+        width: 100%;
+        padding: 25px;
+        height: auto;
+    }
+    
+    .image-div {
+        width: 100%;
+        height: 250px;
+        padding: 0;
+    }
+    
+    .image-div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 0 15px 15px;
+    }
+    
+    .dp img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Mobile Large - Enhanced */
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 45%;
     }
     
     .text-content {
         width: 95%;
+        padding: 0 15px;
+    }
+    
+    #hello-friend {
+        font-size: 3rem;
+    }
+    
+    #name, #work {
+        font-size: 4.5rem;
+        line-height: 1.1;
+    }
+    
+    #info-para {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .about-section, .skills-section, .projects-section-div {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    .section-heading-article {
+        font-size: 3.5rem;
+    }
+    
+    .tech-stack-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .tech-stack-box {
+        height: 100px;
+    }
+    
+    .tech-stack-logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .project-box {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    .info-div {
+        padding: 20px;
+    }
+    
+    .ProjectHeading {
+        font-size: 2.2rem;
+    }
+    
+    .ProjectDescription {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    
+    .image-div {
+        height: 200px;
+    }
+    
+    .dp img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .mobile-navbar-tabs-li {
+        font-size: 2.2rem;
+    }
+    
+    .footercontainer {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    .two-words article {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    
+    .logos {
+        justify-content: center;
+        gap: 25px;
+    }
+}
+
+/* Mobile Standard */
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 42%;
+    }
+    
+    .text-content {
+        width: 98%;
+        padding: 0 10px;
     }
     
     #name, #work {
@@ -2205,58 +2444,122 @@ footer {
     }
     
     .tech-stack-wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
     
     .tech-stack-box {
-        height: calc(76vw);
+        height: 90px;
     }
     
-    .hamburger {
-        width: 60px;
+    .tech-stack-logo {
+        width: 35px;
+        height: 35px;
     }
     
-    #hamburger {
-        margin-right: 10px;
-    }
-    
-    .mobile-navbar-tabs-li {
-        font-size: 2.2rem;
-    }
-}
-
-/* Fix for extremely small screens */
-@media screen and (max-width: 320px) {
-    html {
-        font-size: 38%;
-    }
-    
-    .text-content {
-        width: 95%;
-    }
-    
-    #name, #work {
-        font-size: 3.5rem;
-    }
-    
-    .hamburger {
-        width: 50px;
-    }
-    
-    #hamburger {
-        margin-right: 5px;
+    .dp img {
+        width: 180px;
+        height: 180px;
     }
     
     .mobile-navbar-tabs-li {
         font-size: 2rem;
     }
     
-    .contact-btn-div {
+    .project-buttons {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .cta, .github-redirect {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 38%;
+    }
+    
+    #name, #work {
+        font-size: 3.5rem;
+    }
+    
+    .tech-stack-wrapper {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .tech-stack-box {
+        height: 80px;
         width: 100%;
     }
     
-    .resume-btn, .contact-btn {
-        width: 100%;
-        text-align: center;
+    .dp img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .mobile-navbar-tabs-li {
+        font-size: 1.8rem;
+    }
+    
+    .two-words article {
+        font-size: 1.8rem;
+    }
+    
+    .logos {
+        gap: 15px;
+    }
+    
+    .social-media-container a {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Landscape Orientation Fix */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .landing-page-container {
+        height: auto;
+        min-height: 100vh;
+        padding: 50px 0;
+    }
+    
+    #hello-friend, #name, #work {
+        font-size: 3rem;
+    }
+    
+    .navbar {
+        height: 60px;
+    }
+}
+
+/* Utility Classes */
+.responsive-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hide-mobile {
+    display: block;
+}
+
+.show-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hide-mobile {
+        display: none;
+    }
+    
+    .show-mobile {
+        display: block;
     }
 }
